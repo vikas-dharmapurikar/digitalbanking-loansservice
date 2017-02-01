@@ -11,7 +11,7 @@ To run
 java –jar loanservices-1.0.jar
 
 To test, start postman app in chrome
-http://localhost:8080/loanservice/1/loans
+http://localhost:8080/loanservices/1/loans
 
 You have to create db_loan database in postgresql.
 Use sql scripts to create the tables and insert the data.
