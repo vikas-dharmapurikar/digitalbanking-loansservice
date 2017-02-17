@@ -3,7 +3,7 @@ FROM maven
 
 RUN apt-get install git
 
-RUN git clone https://github.com/spansare/digitalbanking-loansservice
+RUN git clone https://github.com/caprepo/digitalbanking-loansservice
 
 RUN cd /digitalbanking-loansservice
 
