@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.capg.loanservice.model.Customer;
@@ -16,6 +17,8 @@ import com.capg.loanservice.service.LoanService;
 
 @RestController
 @ComponentScan("com.capg.loanservice")
+
+@EnableAutoConfiguration
 public class LoanServicesController {
 
 	@Autowired
