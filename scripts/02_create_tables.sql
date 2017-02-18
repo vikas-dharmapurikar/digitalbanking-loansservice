@@ -95,3 +95,18 @@ TABLESPACE pg_default;
 ALTER TABLE public.loan
     OWNER to postgres;
 
+
+CREATE TABLE public.loan_payment_history
+(
+    emi_no numeric(3) NOT NULL,
+    emi_date date,
+    emi_amount numeric(10, 2),
+    emi_status character varying(10),
+    loan_acc_no numeric(10),
+    emi_rejected_tx_no numeric(10),
+    PRIMARY KEY (emi_no)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;

@@ -30,3 +30,8 @@ insert into loan ("loan_account_id", "branch_id", "loan_account_number", "amount
  insert into loan ("loan_account_id", "branch_id", "loan_account_number", "amount", "loan_type", "customer_id", "loan_id","duration","rate_of_interest",
  "loan_status","loan_commencement_date","loan_creation_date","loan_emi_date")
  VALUES (4, 1, 'AL-153', '20000','AL', 2, 1,84,9.75,'Open','2016-03-21 09:10:59.897666','2016-04-21 09:10:59.897666','2016-05-21 09:10:59.897666');
+ 
+ 
+ INSERT INTO public.loan_payment_history ( emi_no, emi_amount, emi_status, loan_acc_no, emi_date) VALUES ( '1'::numeric, '25000.50'::numeric, 'Paid'::character varying, '1'::numeric, '2017-02-02'::date);	
+INSERT INTO public.loan_payment_history ( emi_no, emi_amount, emi_status, loan_acc_no, emi_date) VALUES ( '2'::numeric, '25000.45'::numeric, 'Failed'::character varying, '1'::numeric, '2017-02-10'::date);
+INSERT INTO public.loan_payment_history ( emi_no, emi_amount, emi_status, loan_acc_no, emi_date) VALUES ( '3'::numeric, '25000.40'::numeric, 'Paid'::character varying, '1'::numeric, '2017-03-10'::date);	
