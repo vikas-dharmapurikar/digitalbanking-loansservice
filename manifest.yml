@@ -1,6 +1,6 @@
 applications:
 - name: digitalbanking-loansservice
-  buildpack: https://github.com/cloudfoundry/java-buildpack
+  buildpack: https://github.com/caprepo/java-buildpack
   memory: 1024M
   instances: 1
   env:
