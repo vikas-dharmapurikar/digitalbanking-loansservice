@@ -3,8 +3,6 @@ applications:
   buildpack: https://github.com/caprepo/java-buildpack
   memory: 1024M
   instances: 1
-  env:
-    SPRING_PROFILES_ACTIVE: prod, cloudfoundry
   host: digitalbanking-loansservice
   disk_quota: 1024M
   services:
