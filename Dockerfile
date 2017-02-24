@@ -16,7 +16,7 @@ RUN apt-get install git
 
 RUN git clone https://github.com/caprepo/digitalbanking-loansservice.git
 
-RUN cd /digitalbanking-accountsservice
+RUN cd /digitalbanking-loansservice
 
 RUN mvn -f /digitalbanking-loansservice/pom.xml clean install -DskipTests
 
