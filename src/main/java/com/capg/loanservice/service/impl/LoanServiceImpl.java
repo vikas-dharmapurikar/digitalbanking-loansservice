@@ -34,11 +34,13 @@ public class LoanServiceImpl implements LoanService{
 	
 	@Override
 	public List<Loan> getLoans(Customer customer) {
+		logger.info("In Service : Finding By Customer");
 		return loanDao.findByCustomer(customer);
 	}
 
 	@Override
 	public Loan getLoanById(int loanAccountId) {
+		logger.info("In Service : Finding By Account Id");
 		return loanDao.findByLoanAccountId(loanAccountId);
 	}
 	
@@ -58,6 +60,7 @@ public class LoanServiceImpl implements LoanService{
 		} catch (ParseException e) {
 			logger.error(e.getMessage());
 		}
+		logger.info("In Service : Getting Recent Transaction");
 		return txList;
 	}
 }

@@ -1,0 +1,9 @@
+applications:
+- name: digitalbanking-loansservice
+  buildpack: https://github.com/caprepo/java-buildpack
+  memory: 1024M
+  instances: 1
+  host: digitalbanking-loansservice
+  disk_quota: 1024M
+  services:
+  - loanserviceDb
