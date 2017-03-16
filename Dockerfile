@@ -20,6 +20,8 @@ RUN cd /digitalbanking-loansservice
 
 RUN mvn -f /digitalbanking-loansservice/pom.xml clean install -DskipTests
 
+COPY newrelic/ /opt/
+
 EXPOSE 8110
 
-ENTRYPOINT ["a8sidecar", "--register", "--supervise", "java", "-jar", "-Dspring.profiles.active=docker", "/digitalbanking-loansservice/target/loanservice-1.0.war"]
+ENTRYPOINT ["a8sidecar", "--register", "--supervise", "java", "-jar", "-Dnewrelic-config-file=/opt/newrelic.yml", "-javaagent:/opt/newrelic.jar", "-Dspring.profiles.active=docker", "/digitalbanking-loansservice/target/loanservice-1.0.war"]
