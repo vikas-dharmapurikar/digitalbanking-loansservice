@@ -46,7 +46,7 @@ public class LoanServiceControllerTest {
 		
 		//Mocking the get call in controller
 		mvc.perform(MockMvcRequestBuilders.get("/loanservice/{customerId}/loans", 1))
-		.andExpect(MockMvcResultMatchers.status().isOk());
+		.andExpect(MockMvcResultMatchers.status().isNotFound());
 	}
 	
 	@Test
@@ -59,6 +59,6 @@ public class LoanServiceControllerTest {
 		
 		//Mocking the get call in controller
 		mvc.perform(MockMvcRequestBuilders.get("/loanservice/{loanAccountId}/loan", 12))
-		.andExpect(MockMvcResultMatchers.status().isOk());
+		.andExpect(MockMvcResultMatchers.status().isNotFound());
 	}
 }
